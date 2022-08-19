@@ -1,4 +1,4 @@
-const quotes = [
+const quotes = [ // List of Quotes
     {
       quote: "The way to get started is to quit talking and begin doing.",
       author: "Walt Disney",
@@ -41,3 +41,11 @@ const quotes = [
       author: "Sheda Savage",
     },
   ];
+
+const quote = document.querySelector("#quote span:first-child"); // select the first span
+const author = document.querySelector("#quote span:last-child"); // select the last span 
+
+todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+quote.innerText = todaysQuote.quote;
+author.innerText = todaysQuote.author;
